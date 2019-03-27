@@ -18,6 +18,21 @@
 <script type="text/javascript">
 $(document).ready(function() {
 
+  // Username can't be blank
+  $('#username').on('input', function() {
+    var input=$(this);
+    var is_username=input.val();
+    if(!is_username){
+      input.after('<span class="error" id="error">Please fill out this field</span>');
+    }
+  });
+
+   //After Form-Group Submitted Validation
+  $("#usernameList").click(function(event){
+    var form_data=$(":input").serializeArray();
+    if(!form_data){event.preventDefault();}
+  });
+
   $('#username').keyup(function() {
     var query = $(this).val();
 
@@ -43,6 +58,7 @@ $(document).ready(function() {
   $(document).on('click', 'li', function(){
     $('#username').val($(this).text());
     $('#usernameList').fadeOut();
+    $('#error').fadeOut();
   });
 });
 </script>
