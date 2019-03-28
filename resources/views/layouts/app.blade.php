@@ -25,9 +25,15 @@
 </head>
 
 <style media="screen">
-    .error{
+    .error_show{
       color: red;
+      margin-left: 250px;
     }
+
+    .error{
+	     display: none;
+       margin-left: 250px;
+     }
 </style>
 
 <body onload="load();">

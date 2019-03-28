@@ -8,6 +8,7 @@
 
     <input type="text" name="username" id="username"
     class="form-control input-lg" placeholder="Enter Username">
+    <span class="error" id="username_span">This field is required</span>
 
     <div id="usernameList"></div>
 
@@ -23,7 +24,10 @@ $(document).ready(function() {
     var input=$(this);
     var is_username=input.val();
     if(!is_username){
-      input.after('<span class="error" id="error">Please fill out this field</span>');
+      $('#username_span').removeClass("error").addClass("error_show");
+      $('#usernameList').fadeOut();
+    } else {
+      $('#username_span').removeClass("error_show").addClass("error");
     }
   });
 

@@ -26,7 +26,7 @@
                                     </span>
                                 @endif
                             </div>
-
+                            <span class="error" id="username_span">This field is required</span>
                         </div>
 
                         <div class="form-group row">
@@ -41,7 +41,7 @@
                                     </span>
                                 @endif
                             </div>
-
+                            <span class="error" id="password_span">This field is required</span>
                         </div>
                         <!--
                         <div class="form-group row">
@@ -64,7 +64,7 @@
                                     </span>
                                 @endif
                             </div>
-
+                            <span class="error" id="name_span">This field is required</span>
                         </div>
 
                         <div class="form-group row">
@@ -79,7 +79,7 @@
                                     </span>
                                 @endif
                             </div>
-
+                            <span class="error" id="surname_span">This field is required</span>
                         </div>
 
                         <div class="form-group row">
@@ -94,7 +94,7 @@
                                     </span>
                                 @endif
                             </div>
-
+                            <span class="error" id="email_span">This field is required</span>
                         </div>
 
                         <div class="form-group row">
@@ -109,7 +109,7 @@
                                     </span>
                                 @endif
                             </div>
-
+                            <span class="error" id="phone_span">This field is required</span>
                         </div>
 
                         <!--ADD new user button-->
@@ -140,7 +140,9 @@ $(document).ready(function() {
     var input=$(this);
     var is_username=input.val();
     if(!is_username){
-      input.after('<span class="error">Please fill out this field</span>');
+      $('#username_span').removeClass("error").addClass("error_show");
+    } else {
+      $('#username_span').removeClass("error_show").addClass("error");
     }
   });
 
@@ -149,7 +151,9 @@ $(document).ready(function() {
     var input=$(this);
     var is_password=input.val();
     if(!is_password){
-      input.after('<span class="error">Please fill out this field</span>');
+      $('#password_span').removeClass("error").addClass("error_show");
+    } else {
+      $('#password_span').removeClass("error_show").addClass("error");
     }
   });
 
@@ -158,7 +162,9 @@ $(document).ready(function() {
     var input=$(this);
     var is_name=input.val();
     if(!is_name){
-      input.after('<span class="error">Please fill out this field</span>');
+      $('#name_span').removeClass("error").addClass("error_show");
+    } else {
+      $('#name_span').removeClass("error_show").addClass("error");
     }
   });
 
@@ -167,7 +173,9 @@ $(document).ready(function() {
     var input=$(this);
     var is_surname=input.val();
     if(!is_surname){
-      input.after('<span class="error">Please fill out this field</span>');
+      $('#surname_span').removeClass("error").addClass("error_show");
+    } else {
+      $('#surname_span').removeClass("error_show").addClass("error");
     }
   });
 
@@ -176,7 +184,9 @@ $(document).ready(function() {
     var input=$(this);
     var is_email=input.val();
     if(!is_email){
-      input.after('<span class="error">Please fill out this field</span>');
+      $('#email_span').removeClass("error").addClass("error_show");
+    } else {
+      $('#email_span').removeClass("error_show").addClass("error");
     }
   });
 
@@ -185,7 +195,9 @@ $(document).ready(function() {
     var input=$(this);
     var is_phone=input.val();
     if(!is_phone){
-      input.after('<span class="error">Please fill out this field</span>');
+      $('#phone_span').removeClass("error").addClass("error_show");
+    } else {
+      $('#phone_span').removeClass("error_show").addClass("error");
     }
   });
 
@@ -222,6 +234,7 @@ $(document).ready(function() {
                                     </span>
                                 @endif
                             </div>
+                            <span class="error" id="username_span">This field is required</span>
                         </div>
 
                         <div class="form-group row">
@@ -236,6 +249,7 @@ $(document).ready(function() {
                                     </span>
                                 @endif
                             </div>
+                            <span class="error" id="password_span">This field is required</span>
                         </div>
                         <!--
                         <div class="form-group row">
@@ -258,6 +272,7 @@ $(document).ready(function() {
                                     </span>
                                 @endif
                             </div>
+                            <span class="error" id="name_span">This field is required</span>
                         </div>
 
                         <div class="form-group row">
@@ -272,6 +287,7 @@ $(document).ready(function() {
                                     </span>
                                 @endif
                             </div>
+                            <span class="error" id="surname_span">This field is required</span>
                         </div>
 
                         <div class="form-group row">
@@ -286,6 +302,7 @@ $(document).ready(function() {
                                     </span>
                                 @endif
                             </div>
+                            <span class="error" id="email_span">This field is required</span>
                         </div>
 
                         <div class="form-group row">
@@ -300,6 +317,7 @@ $(document).ready(function() {
                                     </span>
                                 @endif
                             </div>
+                            <span class="error" id="phone_span">This field is required</span>
                         </div>
 
                         <!--EDIT user button-->
@@ -330,7 +348,9 @@ $(document).ready(function() {
     var input=$(this);
     var is_username=input.val();
     if(!is_username){
-      input.after('<span class="error">Please fill out this field</span>');
+      $('#username_span').removeClass("error").addClass("error_show");
+    } else {
+      $('#username_span').removeClass("error_show").addClass("error");
     }
   });
 
@@ -339,7 +359,9 @@ $(document).ready(function() {
     var input=$(this);
     var is_password=input.val();
     if(!is_password){
-      input.after('<span class="error">Please fill out this field</span>');
+      $('#password_span').removeClass("error").addClass("error_show");
+    } else {
+      $('#password_span').removeClass("error_show").addClass("error");
     }
   });
 
@@ -348,7 +370,9 @@ $(document).ready(function() {
     var input=$(this);
     var is_name=input.val();
     if(!is_name){
-      input.after('<span class="error">Please fill out this field</span>');
+      $('#name_span').removeClass("error").addClass("error_show");
+    } else {
+      $('#name_span').removeClass("error_show").addClass("error");
     }
   });
 
@@ -357,7 +381,9 @@ $(document).ready(function() {
     var input=$(this);
     var is_surname=input.val();
     if(!is_surname){
-      input.after('<span class="error">Please fill out this field</span>');
+      $('#surname_span').removeClass("error").addClass("error_show");
+    } else {
+      $('#surname_span').removeClass("error_show").addClass("error");
     }
   });
 
@@ -366,7 +392,9 @@ $(document).ready(function() {
     var input=$(this);
     var is_email=input.val();
     if(!is_email){
-      input.after('<span class="error">Please fill out this field</span>');
+      $('#email_span').removeClass("error").addClass("error_show");
+    } else {
+      $('#email_span').removeClass("error_show").addClass("error");
     }
   });
 
@@ -375,7 +403,9 @@ $(document).ready(function() {
     var input=$(this);
     var is_phone=input.val();
     if(!is_phone){
-      input.after('<span class="error">Please fill out this field</span>');
+      $('#phone_span').removeClass("error").addClass("error_show");
+    } else {
+      $('#phone_span').removeClass("error_show").addClass("error");
     }
   });
 
